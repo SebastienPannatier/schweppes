@@ -14,17 +14,17 @@ export const Hero = () => {
   return (
     <section className="h-screen w-full pt-5 flex">
       <Nav />
-      <img src={logo.src} alt={logo.src} className="w-64 absolute left-10" />
+      <img src={logo.src} alt={logo.src} className="w-64 absolute left-[2%]" />
       <img
         src={circular_text.src}
         alt={circular_text.src}
-        className="w-48 absolute right-0 mr-28 top-0 mt-20 rotateLeft"
+        className="w-48 absolute right-[7%] top-[10%] rotateLeft"
       />
-      <div className="flex w-full">
+      <div className="flex w-full h-full">
         <h1
           className={
             (monumentExtended.className,
-            "font-extrabold m-auto text-9xl text-center tracking-wide titre")
+            "font-extrabold m-auto text-9xl text-center tracking-wide titre leading-normal")
           }
         >
           NEW AND FRESH FLAVOURS
@@ -33,7 +33,7 @@ export const Hero = () => {
       <img
         src={scrollImg.src}
         alt={scrollImg.src}
-        className="absolute bottom-0 left-0 ml-28 mb-20 rotateRight"
+        className="absolute bottom-[10%] left-[10%] rotateRight"
       />
     </section>
   );
