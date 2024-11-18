@@ -1,0 +1,21 @@
+@keyframes loop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
+}
+
+.rotateRight {
+  animation: loop 15s linear infinite;
+}
+
+.rotateLeft {
+  animation: loop 20s linear infinite;
+  animation-direction: reverse;
+}
+
+.titre {
+  transform: scale(1, 0.7);
+}
