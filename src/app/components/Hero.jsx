@@ -18,7 +18,7 @@ export const Hero = () => {
       <img
         src={circular_text.src}
         alt={circular_text.src}
-        className="w-48 absolute right-[7%] top-[10%] rotateLeft"
+        className="w-48 absolute right-[7%] top-[10%] rotateRight"
       />
       <div className="flex w-full h-full">
         <h1
@@ -33,7 +33,7 @@ export const Hero = () => {
       <img
         src={scrollImg.src}
         alt={scrollImg.src}
-        className="absolute bottom-[10%] left-[10%] rotateRight"
+        className="absolute bottom-[10%] left-[10%] rotateLeft"
       />
     </section>
   );
