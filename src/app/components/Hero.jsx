@@ -4,6 +4,7 @@ import circular_text from "@/app/img/Circular-Text.png";
 import scrollImg from "@/app/img/scroll.png";
 import "@/app/styles/hero.css";
 import localFont from "next/font/local";
+import { Nav } from "@/app/components/elements/Nav";
 
 const monumentExtended = localFont({
   src: "../fonts/MonumentExtended-Regular.otf",
@@ -11,8 +12,9 @@ const monumentExtended = localFont({
 
 export const Hero = () => {
   return (
-    <section className="h-screen w-full pl-10 pt-5 flex">
-      <img src={logo.src} alt={logo.src} className="w-64 absolute" />
+    <section className="h-screen w-full pt-5 flex">
+      <Nav />
+      <img src={logo.src} alt={logo.src} className="w-64 absolute left-10" />
       <img
         src={circular_text.src}
         alt={circular_text.src}
