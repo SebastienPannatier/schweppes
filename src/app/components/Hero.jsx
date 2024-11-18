@@ -12,7 +12,7 @@ const monumentExtended = localFont({
 
 export const Hero = () => {
   return (
-    <section className="h-screen w-full pt-5 flex">
+    <section className="h-screen w-full pt-5 flex relative">
       <Nav />
       <img src={logo.src} alt={logo.src} className="w-64 absolute left-[2%]" />
       <img
