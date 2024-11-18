@@ -10,7 +10,7 @@ export const Nav = () => {
     <nav
       className={
         (monumentExtended.className,
-        "flex justify-center gap-12 absolute top-0 w-full h-min font-bold")
+        "flex justify-center gap-12 absolute top-0 w-full h-min font-bold mt-2")
       }
     >
       <a>ABOUT</a>
