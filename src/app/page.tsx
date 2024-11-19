@@ -3,6 +3,7 @@ import { Hero } from "@/app/components/Hero";
 import { Product } from "@/app/components/Product";
 import { ProductSelection } from "@/app/components/ProductSelection";
 import { VideoPub } from "@/app/components/VideoPub";
+import { OtherSelections } from "@/app/components/OtherSelections";
 import "@/app/styles/global.css";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Product />
       <ProductSelection />
       <VideoPub />
+      <OtherSelections />
     </>
   );
 }
