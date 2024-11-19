@@ -4,6 +4,7 @@ import { Product } from "@/app/components/Product";
 import { ProductSelection } from "@/app/components/ProductSelection";
 import { VideoPub } from "@/app/components/VideoPub";
 import { OtherSelections } from "@/app/components/OtherSelections";
+import { Footer } from "@/app/components/Footer";
 import "@/app/styles/global.css";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductSelection />
       <VideoPub />
       <OtherSelections />
+      <Footer />
     </>
   );
 }
