@@ -47,7 +47,7 @@ export const ProductScrollSection = ({
           {productName}
         </h1>
         <p className="text-wrap mb-[5%]">{productDesc}</p>
-        <button className="bg-[#ED6380] text-3xl text-white rounded-2xl w-[80%] h-[15%] tracking-widest">
+        <button className="bg-[#ED6380] hover:bg-[#ED638090] text-3xl text-white rounded-2xl w-[80%] h-[15%] tracking-widest">
           PRE ORDER NOW
         </button>
       </div>
