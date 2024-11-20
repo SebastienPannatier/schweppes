@@ -1,13 +1,67 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "@/app/styles/wave.css";
 import { ProductScrollSection } from "@/app/components/elements/ProductScrollSection";
 import localFont from "next/font/local";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import can from "@/app/img/canette.png";
+import flavorBackground from "@/app/img/background-product/pasteque.png";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const monumentExtended = localFont({
   src: "../fonts/MonumentExtended-Regular.otf",
 });
 
+const productList = [
+  {
+    canPicture: can,
+    productName: "TROPICAL BLISS",
+    productDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
+    flavorPicture: flavorBackground,
+  },
+  {
+    canPicture: can,
+    productName: "PASTEQUE KIWI",
+    productDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
+    flavorPicture: flavorBackground,
+  },
+  {
+    canPicture: can,
+    productName: "ORANGE SANGUINE",
+    productDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
+    flavorPicture: flavorBackground,
+  },
+];
+
 export const Product = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const sectionHeight = "h-[" + productList.length * 500 + 500 + "vh]";
+
+  useEffect(() => {
+    const productCount = productList.length;
+
+    const tween = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#productScroll",
+        start: "top top",
+        end: `+=${productCount * 500}`, // Durée proportionnelle au nombre de produits
+        pin: true,
+        scrub: true,
+        markers: false,
+        onUpdate: (self) => {
+          const index = Math.floor(self.progress * productCount);
+          setCurrentIndex(Math.min(index, productCount - 1));
+        },
+      },
+    });
+  }, []);
+
   return (
     <>
       <svg
@@ -28,16 +82,37 @@ export const Product = () => {
         ></path>
       </svg>
 
-      <section className="w-full h-[200vh] bg-[#F091A5] relative">
-        <ProductScrollSection />
-        <h1
-          className={
-            (monumentExtended.className,
-            "absolute bottom-0 text-9xl text-center m-auto")
-          }
-        >
-          EXCLUSIVELY COMING THIS SUMMER 2025 IN YOUR STORES
-        </h1>
+      <section className={(sectionHeight, "w-full bg-[#F091A5] relative")}>
+        <div id="productScroll">
+          <div className="flex flex-col items-center justify-center space-y-4 w-[3%] h-full absolute left-[3%]">
+            {productList.map((_, index) => (
+              <div
+                key={index}
+                className={`${
+                  index === currentIndex ? "marker-active" : "marker"
+                }`}
+              ></div>
+            ))}
+          </div>
+          <div id="productSide">
+            <ProductScrollSection
+              canPicture={productList[currentIndex].canPicture}
+              productName={productList[currentIndex].productName}
+              productDesc={productList[currentIndex].productDesc}
+              flavorPicture={productList[currentIndex].flavorPicture}
+            />
+          </div>
+        </div>
+        <div className="h-[50vh]">
+          <h1
+            className={
+              (monumentExtended.className,
+              "absolute bottom-0 text-9xl text-center m-auto")
+            }
+          >
+            EXCLUSIVELY COMING THIS SUMMER 2025 IN YOUR STORES
+          </h1>
+        </div>
       </section>
 
       <svg
