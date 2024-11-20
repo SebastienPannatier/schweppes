@@ -1,5 +1,6 @@
 import React from "react";
 import "@/app/styles/wave.css";
+import { ProductScrollSection } from "@/app/components/elements/ProductScrollSection";
 import localFont from "next/font/local";
 
 const monumentExtended = localFont({
@@ -27,8 +28,14 @@ export const Product = () => {
         ></path>
       </svg>
 
-      <section className="w-full h-screen bg-[#F091A5] relative m-auto text-9xl text-center">
-        <h1 className={(monumentExtended.className, "absolute bottom-0")}>
+      <section className="w-full h-[200vh] bg-[#F091A5] relative">
+        <ProductScrollSection />
+        <h1
+          className={
+            (monumentExtended.className,
+            "absolute bottom-0 text-9xl text-center m-auto")
+          }
+        >
           EXCLUSIVELY COMING THIS SUMMER 2025 IN YOUR STORES
         </h1>
       </section>
