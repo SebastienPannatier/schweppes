@@ -2,6 +2,15 @@ import React from "react";
 import { ClassicProduct } from "@/app/components/elements/ClassicProduct";
 import localFont from "next/font/local";
 
+import can from "@/app/img/defaultCanette/pink.png";
+
+const classicProductList = [
+  {
+    productImage: can,
+    bgColor: "bg-[#DBAFC2]",
+  },
+];
+
 const monumentExtended = localFont({
   src: "../fonts/MonumentExtended-Regular.otf",
 });
@@ -28,10 +37,22 @@ export const OtherSelections = () => {
         </a>
       </div>
       <div className="w-full h-[50%] m-auto flex overflow-hidden relative space-x-4">
-        <ClassicProduct />
-        <ClassicProduct />
-        <ClassicProduct />
-        <ClassicProduct />
+        <ClassicProduct
+          productImage={classicProductList[0].productImage}
+          bgColor={classicProductList[0].bgColor}
+        />
+        <ClassicProduct
+          productImage={classicProductList[0].productImage}
+          bgColor={classicProductList[0].bgColor}
+        />
+        <ClassicProduct
+          productImage={classicProductList[0].productImage}
+          bgColor={classicProductList[0].bgColor}
+        />
+        <ClassicProduct
+          productImage={classicProductList[0].productImage}
+          bgColor={classicProductList[0].bgColor}
+        />
       </div>
     </section>
   );
