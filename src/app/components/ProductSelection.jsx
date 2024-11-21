@@ -2,6 +2,10 @@ import React from "react";
 import { Products } from "@/app/components/elements/Products";
 import localFont from "next/font/local";
 
+import kiwi from "@/app/img/fruits/kiwi1.png";
+import kiwi2 from "@/app/img/fruits/kiwi2.png";
+import pasteque from "@/app/img/fruits/pasteque.png";
+
 const monumentExtended = localFont({
   src: "../fonts/MonumentExtended-Regular.otf",
 });
@@ -11,16 +15,25 @@ const boissons = [
     name: "TROPICAL BLISS",
     cardColor: "bg-[#F091A5]/25",
     buttonColor: "bg-[#F091A5]",
+    backFruit1: kiwi,
+    backFruit2: kiwi2,
+    backFruit3: pasteque,
   },
   {
     name: "PASTEQUE KIWI",
     cardColor: "bg-[#337357]/25",
     buttonColor: "bg-[#337357]",
+    backFruit1: kiwi,
+    backFruit2: kiwi2,
+    backFruit3: pasteque,
   },
   {
     name: "ORANGE SANGUINE",
     cardColor: "bg-[#C84C09]/25",
     buttonColor: "bg-[#C84C09]",
+    backFruit1: kiwi,
+    backFruit2: kiwi2,
+    backFruit3: pasteque,
   },
 ];
 
@@ -49,10 +62,13 @@ export const ProductSelection = () => {
         {boissons.map((element, i) => {
           return (
             <Products
-              key={element.name}
+              key={i}
               name={element.name}
               cardColor={element.cardColor}
               buttonColor={element.buttonColor}
+              backFruit1={element.backFruit1}
+              backFruit2={element.backFruit2}
+              backFruit3={element.backFruit3}
             />
           );
         })}
