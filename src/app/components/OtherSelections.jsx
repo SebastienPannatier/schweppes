@@ -2,12 +2,27 @@ import React from "react";
 import { ClassicProduct } from "@/app/components/elements/ClassicProduct";
 import localFont from "next/font/local";
 
-import can from "@/app/img/defaultCanette/pink.png";
+import mojito from "@/app/img/defaultCanette/mojito.png";
+import agrumes from "@/app/img/defaultCanette/agrumes.png";
+import tonic from "@/app/img/defaultCanette/tonic.png";
+import pink from "@/app/img/defaultCanette/pink.png";
 
 const classicProductList = [
   {
-    productImage: can,
-    bgColor: "bg-[#DBAFC2]",
+    productImage: mojito,
+    bgColor: "bg-[#1EFF0040]",
+  },
+  {
+    productImage: agrumes,
+    bgColor: "bg-[#D8433940]",
+  },
+  {
+    productImage: tonic,
+    bgColor: "bg-[#F2C70940]",
+  },
+  {
+    productImage: pink,
+    bgColor: "bg-[#DBAFC240]",
   },
 ];
 
@@ -37,22 +52,14 @@ export const OtherSelections = () => {
         </a>
       </div>
       <div className="w-full h-[50%] m-auto flex overflow-hidden relative space-x-4">
-        <ClassicProduct
-          productImage={classicProductList[0].productImage}
-          bgColor={classicProductList[0].bgColor}
-        />
-        <ClassicProduct
-          productImage={classicProductList[0].productImage}
-          bgColor={classicProductList[0].bgColor}
-        />
-        <ClassicProduct
-          productImage={classicProductList[0].productImage}
-          bgColor={classicProductList[0].bgColor}
-        />
-        <ClassicProduct
-          productImage={classicProductList[0].productImage}
-          bgColor={classicProductList[0].bgColor}
-        />
+        {classicProductList.map((element, i) => {
+          return (
+            <ClassicProduct
+              productImage={classicProductList[i].productImage}
+              bgColor={classicProductList[i].bgColor}
+            />
+          );
+        })}
       </div>
     </section>
   );
