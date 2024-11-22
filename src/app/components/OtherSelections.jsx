@@ -55,6 +55,7 @@ export const OtherSelections = () => {
         {classicProductList.map((element, i) => {
           return (
             <ClassicProduct
+              key={i}
               productImage={classicProductList[i].productImage}
               bgColor={classicProductList[i].bgColor}
             />
