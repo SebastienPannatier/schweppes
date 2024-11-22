@@ -103,14 +103,18 @@ export const Product = () => {
             />
           </div>
         </div>
-        <div className="h-[50vh]">
+        <div className="h-[50vh] flex justify-center">
           <h1
             className={
               (monumentExtended.className,
               "absolute bottom-0 text-9xl text-center m-auto")
             }
           >
-            EXCLUSIVELY COMING THIS SUMMER 2025 IN YOUR STORES
+            EXCLUSIVELY COMING
+            <br />
+            THIS SUMMER 2025
+            <br />
+            IN YOUR STORES
           </h1>
         </div>
       </section>

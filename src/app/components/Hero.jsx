@@ -27,7 +27,9 @@ export const Hero = () => {
             "font-extrabold m-auto text-9xl text-center tracking-wide titre leading-normal")
           }
         >
-          NEW AND FRESH FLAVOURS
+          NEW AND FRESH
+          <br />
+          FLAVOURS
         </h1>
       </div>
       <img
