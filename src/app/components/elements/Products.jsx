@@ -3,14 +3,13 @@ import React, { useEffect, useRef } from "react";
 import localFont from "next/font/local";
 import gsap from "gsap";
 
-import canette from "@/app/img/canette.png";
-
 const monumentExtended = localFont({
   src: "../../fonts/MonumentExtended-Regular.otf",
 });
 
 export const Products = ({
   name,
+  can,
   cardColor,
   buttonColor,
   backFruit1,
@@ -30,8 +29,8 @@ export const Products = ({
 
     const animFruit1 = gsap.to(fruit1, {
       scale: 1,
-      top: "50%",
-      right: "5%",
+      top: "60%",
+      right: "15%",
       duration: 0.3,
       ease: "back.inOut",
       paused: true,
@@ -39,7 +38,7 @@ export const Products = ({
 
     const animFruit2 = gsap.to(fruit2, {
       scale: 1,
-      top: "20%",
+      top: "30%",
       right: "60%",
       duration: 0.5,
       ease: "back.inOut",
@@ -49,7 +48,7 @@ export const Products = ({
     const animFruit3 = gsap.to(fruit3, {
       scale: 1,
       top: "10%",
-      right: "10%",
+      right: "15%",
       duration: 0.7,
       ease: "back.inOut",
       paused: true,
@@ -82,7 +81,7 @@ export const Products = ({
       >
         {name}
       </a>
-      <img src={canette.src} alt={canette.src} className="z-30" />
+      <img src={can.src} alt={can.src} className="z-30" />
       <img
         src={backFruit1.src}
         className="absolute top-[35%] scale-0 z-20"
