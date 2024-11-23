@@ -11,6 +11,10 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const monumentExtended = localFont({
+  src: "./fonts/MonumentExtended-Regular.otf",
+  variable: "--font-monument-extended",
+});
 
 export const metadata: Metadata = {
   title: "Schweppes",

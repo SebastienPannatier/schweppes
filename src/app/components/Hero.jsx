@@ -3,12 +3,7 @@ import logo from "@/app/img/logo.png";
 import circular_text from "@/app/img/Circular-Text.png";
 import scrollImg from "@/app/img/scroll.png";
 import "@/app/styles/hero.css";
-import localFont from "next/font/local";
 import { Nav } from "@/app/components/elements/Nav";
-
-const monumentExtended = localFont({
-  src: "../fonts/MonumentExtended-Regular.otf",
-});
 
 export const Hero = () => {
   return (
@@ -21,12 +16,7 @@ export const Hero = () => {
         className="w-48 absolute right-[7%] top-[10%] rotateRight"
       />
       <div className="flex w-full h-full">
-        <h1
-          className={
-            (monumentExtended.className,
-            "font-extrabold m-auto text-9xl text-center tracking-wide titre leading-normal")
-          }
-        >
+        <h1 className="font-monumentExtended font-extrabold m-auto text-9xl text-center tracking-wide titre leading-normal">
           NEW AND FRESH
           <br />
           FLAVOURS

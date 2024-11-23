@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import "@/app/styles/wave.css";
 import { ProductScrollSection } from "@/app/components/elements/ProductScrollSection";
-import localFont from "next/font/local";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -13,13 +12,8 @@ import watermelonCan from "@/app/img/can/watermelonCan.png";
 import dragonBackground from "@/app/img/background-product/dragonBackground.png";
 import kiwiBackground from "@/app/img/background-product/kiwiBackground.png";
 import orangeBackground from "@/app/img/background-product/orangeBackground.png";
-import flavorBackground from "@/app/img/background-product/pasteque.png";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const monumentExtended = localFont({
-  src: "../fonts/MonumentExtended-Regular.otf",
-});
 
 const productList = [
   {
@@ -111,12 +105,7 @@ export const Product = () => {
           </div>
         </div>
         <div className="h-[50vh] flex justify-center">
-          <h1
-            className={
-              (monumentExtended.className,
-              "absolute bottom-0 text-9xl text-center m-auto")
-            }
-          >
+          <h1 className="font-monumentExtended absolute bottom-0 text-9xl text-center m-auto">
             EXCLUSIVELY COMING
             <br />
             THIS SUMMER 2025

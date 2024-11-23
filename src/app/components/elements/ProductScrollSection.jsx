@@ -1,11 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import localFont from "next/font/local";
 import "@/app/styles/productScrollSection.css";
 import { gsap } from "gsap";
-
-const monumentExtended = localFont({
-  src: "../../fonts/MonumentExtended-Regular.otf",
-});
 
 export const ProductScrollSection = ({
   canPicture,
@@ -39,11 +34,7 @@ export const ProductScrollSection = ({
     >
       <img src={canPicture.src} ref={imageRef} className="h-[70%]" />
       <div className="flex flex-col w-[25%] h-[50%] relative z-10">
-        <h1
-          className={
-            (monumentExtended.className, "text-4xl font-extrabold mb-[5%]")
-          }
-        >
+        <h1 className="font-monumentExtended text-4xl font-extrabold mb-[5%]">
           {productName}
         </h1>
         <p className="text-wrap mb-[5%]">{productDesc}</p>

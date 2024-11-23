@@ -1,6 +1,5 @@
 import React from "react";
 import { Products } from "@/app/components/elements/Products";
-import localFont from "next/font/local";
 
 import orangeCan from "@/app/img/can/orangeCan.png";
 import tropicalCan from "@/app/img/can/tropicalCan.png";
@@ -17,10 +16,6 @@ import papaya from "@/app/img/fruits/topical/papaya.png";
 import orange1 from "@/app/img/fruits/orange/orange1.png";
 import orange2 from "@/app/img/fruits/orange/orange2.png";
 import citron from "@/app/img/fruits/orange/citron.png";
-
-const monumentExtended = localFont({
-  src: "../fonts/MonumentExtended-Regular.otf",
-});
 
 const boissons = [
   {
@@ -56,20 +51,10 @@ export const ProductSelection = () => {
   return (
     <section className="w-full h-screen relative mt-[5%]">
       <div className="w-[70%] h-[20%] m-auto relative">
-        <a
-          className={
-            (monumentExtended.className,
-            "font-black text-7xl absolute top-0 left-0")
-          }
-        >
+        <a className="font-monumentExtended font-black text-7xl absolute top-0 left-0">
           EXCLUSIVE
         </a>
-        <a
-          className={
-            (monumentExtended.className,
-            "font-black text-7xl absolute bottom-0 right-0")
-          }
-        >
+        <a className="font-monumentExtended font-black text-7xl absolute bottom-0 right-0">
           FLAVOURS
         </a>
       </div>

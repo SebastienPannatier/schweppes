@@ -1,11 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import localFont from "next/font/local";
 import gsap from "gsap";
-
-const monumentExtended = localFont({
-  src: "../../fonts/MonumentExtended-Regular.otf",
-});
 
 export const Products = ({
   name,
@@ -74,11 +69,7 @@ export const Products = ({
       className={`h-[100%] w-[30%] ${cardColor} rounded-3xl flex flex-col items-center relative z-10`}
       ref={cardRef}
     >
-      <a
-        className={
-          (monumentExtended.className, "text-4xl font-extrabold mt-[5%]")
-        }
-      >
+      <a className="font-monumentExtended text-4xl font-extrabold mt-[5%]">
         {name}
       </a>
       <img src={can.src} alt={can.src} className="z-30" />
@@ -98,10 +89,7 @@ export const Products = ({
         ref={fruit3Ref}
       />
       <button
-        className={
-          (monumentExtended.className,
-          `${buttonColor} w-[50%] h-[7%] text-white font-extrabold rounded-2xl absolute bottom-[10%] text-2xl tracking-wider`)
-        }
+        className={`${buttonColor} w-[50%] h-[7%] text-white font-extrabold rounded-2xl absolute bottom-[10%] text-2xl tracking-wider`}
       >
         DISCOVER
       </button>
