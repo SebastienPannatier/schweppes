@@ -22,6 +22,8 @@ const productList = [
     productDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
     flavorPicture: dragonBackground,
+    bgColor: "bg-[#ED6380]/40",
+    buttonColor: "#ED6380",
   },
   {
     canPicture: watermelonCan,
@@ -29,6 +31,8 @@ const productList = [
     productDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
     flavorPicture: kiwiBackground,
+    bgColor: "bg-[#337357]/40",
+    buttonColor: "#337357",
   },
   {
     canPicture: orangeCan,
@@ -36,6 +40,8 @@ const productList = [
     productDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
     flavorPicture: orangeBackground,
+    bgColor: "bg-[#C84C09]/40",
+    buttonColor: "#C84C09",
   },
 ];
 
@@ -77,13 +83,18 @@ export const Product = () => {
           d="M 0,400 L 0,150 C 105.09090909090907,150.05741626794259 210.18181818181813,150.11483253588517 311,151 C 411.81818181818187,151.88516746411483 508.3636363636364,153.59808612440193 602,139 C 695.6363636363636,124.40191387559807 786.3636363636365,93.49282296650718 881,103 C 975.6363636363635,112.50717703349282 1074.1818181818182,162.43062200956936 1168,177 C 1261.8181818181818,191.56937799043064 1350.909090909091,170.78468899521533 1440,150 L 1440,400 L 0,400 Z"
           stroke="none"
           strokeWidth="0"
-          fill="#f091a5"
+          fill="#ED638065"
           fillOpacity="1"
           className="transition-all duration-300 ease-in-out delay-150 path-0"
         ></path>
       </svg>
 
-      <section className={(sectionHeight, "w-full bg-[#F091A5] relative")}>
+      <section
+        className={
+          (sectionHeight,
+          `w-full ${productList[currentIndex].bgColor} relative`)
+        }
+      >
         <div id="productScroll">
           <div className="flex flex-col items-center justify-center space-y-4 w-[3%] h-full absolute left-[3%]">
             {productList.map((_, index) => (
@@ -101,6 +112,7 @@ export const Product = () => {
               productName={productList[currentIndex].productName}
               productDesc={productList[currentIndex].productDesc}
               flavorPicture={productList[currentIndex].flavorPicture}
+              buttonColor={productList[currentIndex].buttonColor}
             />
           </div>
         </div>
@@ -127,7 +139,7 @@ export const Product = () => {
           d="M 0,400 L 0,150 C 112.49760765550238,140.62200956937798 224.99521531100476,131.24401913875596 330,131 C 435.00478468899524,130.75598086124404 532.5167464114833,139.64593301435409 615,134 C 697.4832535885167,128.35406698564591 764.9377990430622,108.17224880382776 857,112 C 949.0622009569378,115.82775119617224 1065.732057416268,143.66507177033492 1167,154 C 1268.267942583732,164.33492822966508 1354.1339712918661,157.16746411483254 1440,150 L 1440,400 L 0,400 Z"
           stroke="none"
           strokeWidth="0"
-          fill="#f091a5"
+          fill="#C84C0965"
           fillOpacity="1"
           className="transition-all duration-300 ease-in-out delay-150 path-0"
           transform="rotate(-180 720 200)"
