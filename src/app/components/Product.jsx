@@ -5,7 +5,14 @@ import { ProductScrollSection } from "@/app/components/elements/ProductScrollSec
 import localFont from "next/font/local";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import can from "@/app/img/canette.png";
+
+import orangeCan from "@/app/img/can/orangeCan.png";
+import tropicalCan from "@/app/img/can/tropicalCan.png";
+import watermelonCan from "@/app/img/can/watermelonCan.png";
+
+import dragonBackground from "@/app/img/background-product/dragonBackground.png";
+import kiwiBackground from "@/app/img/background-product/kiwiBackground.png";
+import orangeBackground from "@/app/img/background-product/orangeBackground.png";
 import flavorBackground from "@/app/img/background-product/pasteque.png";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,25 +23,25 @@ const monumentExtended = localFont({
 
 const productList = [
   {
-    canPicture: can,
+    canPicture: tropicalCan,
     productName: "TROPICAL BLISS",
     productDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
-    flavorPicture: flavorBackground,
+    flavorPicture: dragonBackground,
   },
   {
-    canPicture: can,
+    canPicture: watermelonCan,
     productName: "PASTEQUE KIWI",
     productDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
-    flavorPicture: flavorBackground,
+    flavorPicture: kiwiBackground,
   },
   {
-    canPicture: can,
+    canPicture: orangeCan,
     productName: "ORANGE SANGUINE",
     productDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
-    flavorPicture: flavorBackground,
+    flavorPicture: orangeBackground,
   },
 ];
 

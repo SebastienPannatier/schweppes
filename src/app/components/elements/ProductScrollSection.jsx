@@ -51,10 +51,13 @@ export const ProductScrollSection = ({
           PRE ORDER NOW
         </button>
       </div>
-      <img
-        src={flavorPicture.src}
-        className="absolute right-[-20%] h-[90%] rounded-full z-1"
-      />
+      <div className="absolute right-[-20%] h-[910px] w-[910px] rounded-full overflow-hidden z-1">
+        <img
+          src={flavorPicture.src}
+          className="h-full w-full object-cover"
+          alt="Flavor"
+        />
+      </div>
     </div>
   );
 };
