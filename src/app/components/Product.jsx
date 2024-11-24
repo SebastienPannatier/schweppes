@@ -53,7 +53,7 @@ export const Product = () => {
   useEffect(() => {
     const productCount = productList.length;
 
-    const tween = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
         trigger: "#productScroll",
         start: "top top",
