@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import "@/app/styles/productScrollSection.css";
 import { gsap } from "gsap";
 
@@ -33,7 +34,14 @@ export const ProductScrollSection = ({
       ref={containerRef}
       className="w-full h-screen flex items-center relative overflow-hidden"
     >
-      <img src={canPicture.src} ref={imageRef} className="h-[70%]" />
+      <Image
+        src={canPicture.src}
+        alt={canPicture.src}
+        width={canPicture.width}
+        height={canPicture.height}
+        ref={imageRef}
+        className="w-[35%]"
+      />
       <div className="flex flex-col w-[25%] h-[50%] relative z-10">
         <h1 className="font-monumentExtended text-4xl font-extrabold mb-[5%]">
           {productName}
@@ -46,10 +54,12 @@ export const ProductScrollSection = ({
         </button>
       </div>
       <div className="absolute right-[-20%] h-[910px] w-[910px] rounded-full overflow-hidden z-1">
-        <img
+        <Image
           src={flavorPicture.src}
+          alt={flavorPicture.src}
+          width={flavorPicture.width}
+          height={flavorPicture.height}
           className="h-full w-full object-cover"
-          alt="Flavor"
         />
       </div>
     </div>

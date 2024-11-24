@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 
 export const Products = ({
@@ -72,19 +73,34 @@ export const Products = ({
       <a className="font-monumentExtended text-4xl font-extrabold mt-[5%]">
         {name}
       </a>
-      <img src={can.src} alt={can.src} className="z-30" />
-      <img
+      <Image
+        src={can.src}
+        alt={can.src}
+        width={can.width}
+        height={can.height}
+        className="z-30"
+      />
+      <Image
         src={backFruit1.src}
+        alt={backFruit1.src}
+        width={backFruit1.width}
+        height={backFruit1.height}
         className="absolute top-[35%] scale-0 z-20"
         ref={fruit1Ref}
       />
-      <img
+      <Image
         src={backFruit2.src}
+        alt={backFruit2.src}
+        width={backFruit2.width}
+        height={backFruit2.height}
         className="absolute top-[35%] scale-0 z-20"
         ref={fruit2Ref}
       />
-      <img
+      <Image
         src={backFruit3.src}
+        alt={backFruit3.src}
+        width={backFruit3.width}
+        height={backFruit3.height}
         className="absolute top-[35%] scale-0 z-20"
         ref={fruit3Ref}
       />

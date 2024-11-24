@@ -23,7 +23,7 @@ const productList = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel natus ut perferendis exercitationem facere nam? Rem vitae minima odit eaque, accusantium, at, amet quibusdam esse laborum libero hic voluptatibus.",
     flavorPicture: dragonBackground,
     bgColor: "bg-[#ED6380]/40",
-    buttonColor: "#ED6380",
+    buttonColor: "#F091A5",
   },
   {
     canPicture: watermelonCan,

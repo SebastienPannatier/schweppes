@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import Image from "next/image";
 import logo from "@/app/img/logo.png";
 import circular_text from "@/app/img/Circular-Text.png";
 import scrollImg from "@/app/img/scroll.png";
@@ -32,15 +33,25 @@ export const Hero = () => {
   return (
     <section className="h-screen w-full pt-5 flex relative overflow-hidden">
       <Nav />
-      <img src={logo.src} alt={logo.src} className="w-64 absolute left-[2%]" />
-      <img
+      <Image
+        src={logo.src}
+        alt={logo.src}
+        width={logo.width}
+        height={logo.height}
+        className="w-64 absolute left-[2%]"
+      />
+      <Image
         src={circular_text.src}
         alt={circular_text.src}
+        width={circular_text.width}
+        height={circular_text.height}
         className="w-48 absolute right-[7%] top-[10%] rotateRight"
       />
-      <img
+      <Image
         src={parallaxCan.src}
         alt={parallaxCan.src}
+        width={parallaxCan.width}
+        height={parallaxCan.height}
         className="absolute z-10 w-[40%] parallax-can rotate-[-50deg] top-[10%] left-[30%]"
       />
       <div className="flex w-full h-full">
@@ -50,9 +61,11 @@ export const Hero = () => {
           FLAVOURS
         </h1>
       </div>
-      <img
+      <Image
         src={scrollImg.src}
         alt={scrollImg.src}
+        width={scrollImg.width}
+        height={scrollImg.height}
         className="absolute bottom-[10%] left-[10%] rotateLeft"
       />
     </section>
