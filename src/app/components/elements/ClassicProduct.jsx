@@ -1,6 +1,9 @@
 "use client";
 import React, { useRef, useEffect } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
+
+import productReference from "@/app/img/defaultCanette/mojito.png";
 
 export const ClassicProduct = ({ productImage, bgColor }) => {
   const productRef = useRef(null);
@@ -32,12 +35,15 @@ export const ClassicProduct = ({ productImage, bgColor }) => {
   return (
     <div
       ref={productRef}
-      className={`${bgColor} w-[25%] aspect-auto rounded-3xl flex justify-center items-center flex-shrink-0`}
+      className={`${bgColor} w-[25%] aspect-auto rounded-3xl flex justify-center items-center flex-shrink-0 relative`}
     >
-      <img
+      <Image
         ref={imageRef}
         src={productImage.src}
-        className="h-[80%] transition-transform duration-300"
+        alt={imageRef}
+        width={productReference.width}
+        height={productReference.height}
+        className="w-[30%] transition-transform duration-300"
       />
     </div>
   );
